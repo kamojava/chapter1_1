@@ -1,0 +1,806 @@
+create table kakeico(
+hiduke  date,
+himoku  varchar(20),
+memo    varchar(100),
+nyukin  integer,
+syukkin integer
+);
+
+insert into kakeibo 
+values('2018-02-03','食費','コーヒーを購入',0,380);
+insert into kakeibo 
+values('2018-02-10','給料','1月の給料',28000,0);
+insert into kakeibo 
+values('2018-02-11','教養娯楽費','書籍を購入',0,2800);
+insert into kakeibo 
+values('2018-02-14','交際費','同期会の会費',0,5000);
+insert into kakeibo 
+values('2018-02-18','水道高熱費','１月の電気代',0,7560)
+;insert into kakeibo 
+values('2018-02-25','居住費','3月の家賃',0,85000);
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| 12java             |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sakila             |
+| sys                |
+| world              |
++--------------------+
+7 rows in set (0.00 sec)
+
+mysql> use 12java;
+Database changed
+mysql> show tables;
++------------------+
+| Tables_in_12java |
++------------------+
+| kakeibo          |
++------------------+
+1 row in set (0.05 sec)
+
+mysql> drop table kakeibo;
+Query OK, 0 rows affected (0.39 sec)
+
+mysql> show tables;
+Empty set (0.06 sec)
+
+mysql> create table kakeico(
+    -> hiduke  date,
+    -> himoku  varcher(20),
+    -> memo    varcher(100),
+    -> nyukin  integer,
+    -> syukkin integer
+    -> );
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'varcher(20),
+memo    varcher(100),
+nyukin  integer,
+syukkin integer
+)' at line 3
+mysql> create table kakeico(
+    -> hiduke  date,
+    -> himoku  varchar(20),
+    -> memo    varchar(100),
+    -> nyukin  integer,
+    -> syukkin integer
+    -> );
+Query OK, 0 rows affected (1.53 sec)
+
+mysql> show coloumns from kakeibo;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'coloumns from kakeibo' at line 1
+mysql> alter table kakeico rename kakeibo;
+Query OK, 0 rows affected (0.36 sec)
+
+mysql> show show columns from kakeibo;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'show columns from kakeibo' at line 1
+mysql> show columns from kakeibo;
++---------+--------------+------+-----+---------+-------+
+| Field   | Type         | Null | Key | Default | Extra |
++---------+--------------+------+-----+---------+-------+
+| hiduke  | date         | YES  |     | NULL    |       |
+| himoku  | varchar(20)  | YES  |     | NULL    |       |
+| memo    | varchar(100) | YES  |     | NULL    |       |
+| nyukin  | int          | YES  |     | NULL    |       |
+| syukkin | int          | YES  |     | NULL    |       |
++---------+--------------+------+-----+---------+-------+
+5 rows in set (0.05 sec)
+
+mysql> select * from kakeibo;
+Empty set (0.00 sec)
+
+mysql> inster into kakkeibo values('2018-02-037','食費
+    '> ^C
+mysql> insert into kakeibo
+    -> values('2018-02-03','食費','コーヒーを購入',0,380);
+Query OK, 1 row affected (0.13 sec)
+
+mysql>  ^S^C
+mysql> insert into kakeibo
+    -> values('2018-02-03','食費','コーヒーを購入',0,380);
+Query OK, 1 row affected (0.21 sec)
+
+mysql> insert into kakeibo
+    -> values('2018-02-10','給料','1月の給料',28000,0);
+Query OK, 1 row affected (0.15 sec)
+
+mysql> insert into kakeibo
+    -> values('2018-02-11','教養娯楽費','書籍を購入',0,2800);
+Query OK, 1 row affected (0.10 sec)
+
+mysql> insert into kakeibo
+    -> values('2018-02-14','交際費','同期会の会費',0,5000);
+Query OK, 1 row affected (0.11 sec)
+
+mysql> insert into kakeibo
+    -> values('2018-02-18','水道高熱費','１月の電気代',0,7560);
+Query OK, 1 row affected (0.21 sec)
+
+mysql> select * from kakeibo;
++------------+------------+----------------+--------+---------+
+| hiduke     | himoku     | memo           | nyukin | syukkin |
++------------+------------+----------------+--------+---------+
+| 2018-02-03 | 食費       | コーヒーを購入 |      0 |     380 |
+| 2018-02-03 | 食費       | コーヒーを購入 |      0 |     380 |
+| 2018-02-10 | 給料       | 1月の給料      |  28000 |       0 |
+| 2018-02-11 | 教養娯楽費 | 書籍を購入     |      0 |    2800 |
+| 2018-02-14 | 交際費     | 同期会の会費   |      0 |    5000 |
+| 2018-02-18 | 水道高熱費 | １月の電気代   |      0 |    7560 |
++------------+------------+----------------+--------+---------+
+6 rows in set (0.03 sec)
+
+mysql> delete from kakeibo;
+Query OK, 6 rows affected (0.09 sec)
+
+mysql> insert into kakeibo
+    -> values('2018-02-03','食費','コーヒーを購入',0,380);
+Query OK, 1 row affected (0.11 sec)
+
+mysql> insert into kakeibo
+    -> values('2018-02-10','給料','1月の給料',28000,0);
+Query OK, 1 row affected (0.30 sec)
+
+mysql> insert into kakeibo
+    -> values('2018-02-11','教養娯楽費','書籍を購入',0,2800);
+Query OK, 1 row affected (0.21 sec)
+
+mysql> insert into kakeibo
+    -> values('2018-02-14','交際費','同期会の会費',0,5000);
+Query OK, 1 row affected (0.14 sec)
+
+mysql> insert into kakeibo
+    -> values('2018-02-18','水道高熱費','１月の電気代',0,7560);
+Query OK, 1 row affected (0.06 sec)
+
+mysql> select * from kakeibo;
++------------+------------+----------------+--------+---------+
+| hiduke     | himoku     | memo           | nyukin | syukkin |
++------------+------------+----------------+--------+---------+
+| 2018-02-03 | 食費       | コーヒーを購入 |      0 |     380 |
+| 2018-02-10 | 給料       | 1月の給料      |  28000 |       0 |
+| 2018-02-11 | 教養娯楽費 | 書籍を購入     |      0 |    2800 |
+| 2018-02-14 | 交際費     | 同期会の会費   |      0 |    5000 |
+| 2018-02-18 | 水道高熱費 | １月の電気代   |      0 |    7560 |
++------------+------------+----------------+--------+---------+
+5 rows in set (0.00 sec)
+
+mysql> select syukkin
+    -> from kakeibo;
++---------+
+| syukkin |
++---------+
+|     380 |
+|       0 |
+|    2800 |
+|    5000 |
+|    7560 |
++---------+
+5 rows in set (0.00 sec)
+mysql> use 12java;
+Database changed
+mysql> select * from kakeibo;
++------------+------------+----------------+--------+---------+
+| hiduke     | himoku     | memo           | nyukin | syukkin |
++------------+------------+----------------+--------+---------+
+| 2018-02-03 | 食費       | コーヒーを購入 |      0 |     380 |
+| 2018-02-10 | 給料       | 1月の給料      |  28000 |       0 |
+| 2018-02-11 | 教養娯楽費 | 書籍を購入     |      0 |    2800 |
+| 2018-02-14 | 交際費     | 同期会の会費   |      0 |    5000 |
+| 2018-02-18 | 水道高熱費 | １月の電気代   |      0 |    7560 |
++------------+------------+----------------+--------+---------+
+5 rows in set (0.00 sec)
+
+mysql> select hiduke,himoku,syukkin
+    -> from kakeibo
+    -> where syukkin > 3000;
++------------+------------+---------+
+| hiduke     | himoku     | syukkin |
++------------+------------+---------+
+| 2018-02-14 | 交際費     |    5000 |
+| 2018-02-18 | 水道高熱費 |    7560 |
++------------+------------+---------+
+2 rows in set (0.00 sec)
+
+mysql> select hiduke,himoku,syukkin
+    -> from kakeibo
+    -> where syukkin >=3000;
++------------+------------+---------+
+| hiduke     | himoku     | syukkin |
++------------+------------+---------+
+| 2018-02-14 | 交際費     |    5000 |
+| 2018-02-18 | 水道高熱費 |    7560 |
++------------+------------+---------+
+2 rows in set (0.00 sec)
+
+mysql> insert into kakeibo
+    -> values('2018-02-25','居住費','3月の家賃',0,85000);
+Query OK, 1 row affected (0.14 sec)
+
+mysql> select * from kakeibo;
++------------+------------+----------------+--------+---------+
+| hiduke     | himoku     | memo           | nyukin | syukkin |
++------------+------------+----------------+--------+---------+
+| 2018-02-03 | 食費       | コーヒーを購入 |      0 |     380 |
+| 2018-02-10 | 給料       | 1月の給料      |  28000 |       0 |
+| 2018-02-11 | 教養娯楽費 | 書籍を購入     |      0 |    2800 |
+| 2018-02-14 | 交際費     | 同期会の会費   |      0 |    5000 |
+| 2018-02-18 | 水道高熱費 | １月の電気代   |      0 |    7560 |
+| 2018-02-25 | 居住費     | 3月の家賃      |      0 |   85000 |
++------------+------------+----------------+--------+---------+
+6 rows in set (0.03 sec)
+
+mysql> update kakeibo
+    -> set syukkin = 90000
+    -> where hiduke = '2018-02-25';
+Query OK, 1 row affected (0.12 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from kakeibo;
++------------+------------+----------------+--------+---------+
+| hiduke     | himoku     | memo           | nyukin | syukkin |
++------------+------------+----------------+--------+---------+
+| 2018-02-03 | 食費       | コーヒーを購入 |      0 |     380 |
+| 2018-02-10 | 給料       | 1月の給料      |  28000 |       0 |
+| 2018-02-11 | 教養娯楽費 | 書籍を購入     |      0 |    2800 |
+| 2018-02-14 | 交際費     | 同期会の会費   |      0 |    5000 |
+| 2018-02-18 | 水道高熱費 | １月の電気代   |      0 |    7560 |
+| 2018-02-25 | 居住費     | 3月の家賃      |      0 |   90000 |
++------------+------------+----------------+--------+---------+
+6 rows in set (0.00 sec)
+
+mysql> delete from kakeibo
+    -> where hiduke = '2018-02-25';
+Query OK, 1 row affected (0.13 sec)
+
+mysql> select * from kakeibo;
++------------+------------+----------------+--------+---------+
+| hiduke     | himoku     | memo           | nyukin | syukkin |
++------------+------------+----------------+--------+---------+
+| 2018-02-03 | 食費       | コーヒーを購入 |      0 |     380 |
+| 2018-02-10 | 給料       | 1月の給料      |  28000 |       0 |
+| 2018-02-11 | 教養娯楽費 | 書籍を購入     |      0 |    2800 |
+| 2018-02-14 | 交際費     | 同期会の会費   |      0 |    5000 |
+| 2018-02-18 | 水道高熱費 | １月の電気代   |      0 |    7560 |
++------------+------------+----------------+--------+---------+
+5 rows in set (0.00 sec)
+
+mysql> select *from kakeibo
+    -> ^C
+mysql> select * from kakeibo
+    -> where nyukin = 5000;
+Empty set (0.00 sec)
+
+mysql> update * from kakeibo
+    -> set memo = 'カフェラテを購入'
+    -> where hiduke = '2018-02-03';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '* from kakeibo
+set memo = 'カフェラテを購入'
+where hiduke = '2018-02-03'' at line 1
+mysql> uptade kakeibo
+    -> set memo = 'カフェラテを購入'
+    -> where hiduke = '2018-02-03';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'uptade kakeibo
+set memo = 'カフェラテを購入'
+where hiduke = '2018-02-03'' at line 1
+mysql> select * from kakeibo;
++------------+------------+----------------+--------+---------+
+| hiduke     | himoku     | memo           | nyukin | syukkin |
++------------+------------+----------------+--------+---------+
+| 2018-02-03 | 食費       | コーヒーを購入 |      0 |     380 |
+| 2018-02-10 | 給料       | 1月の給料      |  28000 |       0 |
+| 2018-02-11 | 教養娯楽費 | 書籍を購入     |      0 |    2800 |
+| 2018-02-14 | 交際費     | 同期会の会費   |      0 |    5000 |
+| 2018-02-18 | 水道高熱費 | １月の電気代   |      0 |    7560 |
++------------+------------+----------------+--------+---------+
+5 rows in set (0.00 sec)
+
+mysql> drop table kakeibo;
+Query OK, 0 rows affected (0.89 sec)
+
+mysql> create table kakeibo(
+    ->  hiduke  date,
+    ->  himoku  varchar(20),
+    ->  memo    varchar(100),
+    ->  nyukin  integer,
+    ->  syukkin integer
+    -> );
+Query OK, 0 rows affected (0.51 sec)
+
+mysql> insert into kakeibo values
+    -> ('2018-02-03','食費','コーヒーを購入',0,380),
+    -> ('2018-02-10','給料','1月の給料',280000,0),
+    -> ('2018-02-11','教養娯楽費','書籍を購入',0,2800),
+    -> ('2018-02-14','交際費','同期会の会費',0,5000),
+    -> ('2018-02-18','水道光熱費','1月の電気代',0,7560);
+Query OK, 5 rows affected (0.14 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+mysql> select * from kakeibo;
++------------+------------+----------------+--------+---------+
+| hiduke     | himoku     | memo           | nyukin | syukkin |
++------------+------------+----------------+--------+---------+
+| 2018-02-03 | 食費       | コーヒーを購入 |      0 |     380 |
+| 2018-02-10 | 給料       | 1月の給料      | 280000 |       0 |
+| 2018-02-11 | 教養娯楽費 | 書籍を購入     |      0 |    2800 |
+| 2018-02-14 | 交際費     | 同期会の会費   |      0 |    5000 |
+| 2018-02-18 | 水道光熱費 | 1月の電気代    |      0 |    7560 |
++------------+------------+----------------+--------+---------+
+5 rows in set (0.00 sec)
+
+mysql> select himoku, syukin from kakibo where syukkin > 3000;
+ERROR 1146 (42S02): Table '12java.kakibo' doesn't exist
+mysql> select himoku, syukkin from kakeibo where syukkin >3000;
++------------+---------+
+| himoku     | syukkin |
++------------+---------+
+| 交際費     |    5000 |
+| 水道光熱費 |    7560 |
++------------+---------+
+2 rows in set (0.00 sec)
+
+mysql> select himoku,syukkin
+    -> from kakeibo
+    -> where syukkin >3000;
++------------+---------+
+| himoku     | syukkin |
++------------+---------+
+| 交際費     |    5000 |
+| 水道光熱費 |    7560 |
++------------+---------+
+2 rows in set (0.00 sec)
+
+mysql> /* 入出金表示用　SQL　バージョン0.1
+   /*> 作成者：加茂　作成日2021-12-14 */
+mysql> select nyukin,syukkin --金額関連のみ表示
+    -> from kakeibo;
+ERROR 1054 (42S22): Unknown column '金額関連のみ表示' in 'field list'
+mysql> */入出金表示用 SQL バージョン0.1
+    -> 作成者:加茂 作成日:2021-12-14 */
+    -> ^C
+mysql> /*入出金表示用 SQL バージョン0.1
+   /*> 作成日:加茂 作成者:2021-12-14 */
+mysql> select nyukin,syukkin -- 金額関連の列のみ表示
+    -> from kakeibo;
++--------+---------+
+| nyukin | syukkin |
++--------+---------+
+|      0 |     380 |
+| 280000 |       0 |
+|      0 |    2800 |
+|      0 |    5000 |
+|      0 |    7560 |
++--------+---------+
+5 rows in set (0.00 sec)
+
+mysql> update kakeibo
+    -> set memo = 'カフェラテを購入'
+    -> where = '2018-02-03';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= '2018-02-03'' at line 3
+mysql> update kakeibo
+    -> set memo ='カフェラテを購入'
+    -> where hiduke = '2018-02-03';
+Query OK, 1 row affected (0.16 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from kakeibo;
++------------+------------+------------------+--------+---------+
+| hiduke     | himoku     | memo             | nyukin | syukkin |
++------------+------------+------------------+--------+---------+
+| 2018-02-03 | 食費       | カフェラテを購入 |      0 |     380 |
+| 2018-02-10 | 給料       | 1月の給料        | 280000 |       0 |
+| 2018-02-11 | 教養娯楽費 | 書籍を購入       |      0 |    2800 |
+| 2018-02-14 | 交際費     | 同期会の会費     |      0 |    5000 |
+| 2018-02-18 | 水道光熱費 | 1月の電気代      |      0 |    7560 |
++------------+------------+------------------+--------+---------+
+5 rows in set (0.05 sec)
+
+mysql> update kakeibo
+    -> set ='コーヒーを購入'
+    -> ^C
+mysql>
+mysql> ^C
+mysql> update kakeibo
+    -> set memo ='コーヒーを購入'
+    -> where hiduke = '2018-020-03';
+ERROR 1292 (22007): Incorrect date value: '2018-020-03' for column 'hiduke' at row 1
+mysql> update kakeibo
+    -> set memo ='コーヒーを購入'
+    -> where hiduke = '2018-02-03';
+Query OK, 1 row affected (0.12 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from kakeibo;
++------------+------------+----------------+--------+---------+
+| hiduke     | himoku     | memo           | nyukin | syukkin |
++------------+------------+----------------+--------+---------+
+| 2018-02-03 | 食費       | コーヒーを購入 |      0 |     380 |
+| 2018-02-10 | 給料       | 1月の給料      | 280000 |       0 |
+| 2018-02-11 | 教養娯楽費 | 書籍を購入     |      0 |    2800 |
+| 2018-02-14 | 交際費     | 同期会の会費   |      0 |    5000 |
+| 2018-02-18 | 水道光熱費 | 1月の電気代    |      0 |    7560 |
++------------+------------+----------------+--------+---------+
+5 rows in set (0.03 sec)
+mysql> inrsert into kakeibo
+    -> valuse('2018-02-25','居住費','3月の家賃','0','85000');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'inrsert into kakeibo
+valuse('2018-02-25','居住費','3月の家賃','0','85000'' at line 1
+mysql> insert into kakeibo
+    -> values('2018-02-25','居住費','3月の家賃',0,85000);
+Query OK, 1 row affected (0.08 sec)
+
+mysql> select * from kakeibo;
++------------+------------+----------------+--------+---------+
+| hiduke     | himoku     | memo           | nyukin | syukkin |
++------------+------------+----------------+--------+---------+
+| 2018-02-03 | 食費       | コーヒーを購入 |      0 |     380 |
+| 2018-02-10 | 給料       | 1月の給料      | 280000 |       0 |
+| 2018-02-11 | 教養娯楽費 | 書籍を購入     |      0 |    2800 |
+| 2018-02-14 | 交際費     | 同期会の会費   |      0 |    5000 |
+| 2018-02-18 | 水道光熱費 | 1月の電気代    |      0 |    7560 |
+| 2018-02-25 | 居住費     | 3月の家賃      |      0 |   85000 |
++------------+------------+----------------+--------+---------+
+6 rows in set (0.04 sec)
+
+mysql> select himoku,nyukin,syukkin
+    -> from kakeibo;7
++------------+--------+---------+
+| himoku     | nyukin | syukkin |
++------------+--------+---------+
+| 食費       |      0 |     380 |
+| 給料       | 280000 |       0 |
+| 教養娯楽費 |      0 |    2800 |
+| 交際費     |      0 |    5000 |
+| 水道光熱費 |      0 |    7560 |
+| 居住費     |      0 |   85000 |
++------------+--------+---------+
+6 rows in set (0.00 sec)
+
+    -> ^C
+mysql> select himoku as ITEM, nyukin as RECEIVE, syukkin as PAY
+    -> from ^C
+mysql> select himoku AS ITEM, nyukin AS RECEIVE, syukkin AS PAY
+    -> from kakeibo AS MONEYBOOK
+    -> where himoku= '給料';
++------+---------+------+
+| ITEM | RECEIVE | PAY  |
++------+---------+------+
+| 給料 |  280000 |    0 |
++------+---------+------+
+1 row in set (0.03 sec)
+
+mysql> select himoku ITEM, nyukin RECEIVE, syukkin  PAY
+    -> from kakeibo MONEYBOOK
+    -> where himoku= '給料';
++------+---------+------+
+| ITEM | RECEIVE | PAY  |
++------+---------+------+
+| 給料 |  280000 |    0 |
++------+---------+------+
+1 row in set (0.00 sec)
+
+mysql> uptade kakeibo
+    -> set nyukin =99999;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'uptade kakeibo
+set nyukin =99999' at line 1
+mysql> uptade kakeibo
+    -> set nyukin = 99999;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'uptade kakeibo
+set nyukin = 99999' at line 1
+mysql> update kakeibo
+    -> set nyukin =  99999;
+Query OK, 6 rows affected (0.11 sec)
+Rows matched: 6  Changed: 6  Warnings: 0
+
+mysql> select * from kakeibo;
++------------+------------+----------------+--------+---------+
+| hiduke     | himoku     | memo           | nyukin | syukkin |
++------------+------------+----------------+--------+---------+
+| 2018-02-03 | 食費       | コーヒーを購入 |  99999 |     380 |
+| 2018-02-10 | 給料       | 1月の給料      |  99999 |       0 |
+| 2018-02-11 | 教養娯楽費 | 書籍を購入     |  99999 |    2800 |
+| 2018-02-14 | 交際費     | 同期会の会費   |  99999 |    5000 |
+| 2018-02-18 | 水道光熱費 | 1月の電気代    |  99999 |    7560 |
+| 2018-02-25 | 居住費     | 3月の家賃      |  99999 |   85000 |
++------------+------------+----------------+--------+---------+
+6 rows in set (0.00 sec)
+
+mysql> update kakeibo
+    -> set nyukin = 0;
+Query OK, 6 rows affected (0.11 sec)
+Rows matched: 6  Changed: 6  Warnings: 0
+
+mysql> update kakeibo
+    -> set nyukin = 0;
+Query OK, 0 rows affected (0.03 sec)
+Rows matched: 6  Changed: 0  Warnings: 0
+
+mysql> update kakeibo
+    -> set nyukin = 0
+    -> ^C
+mysql> update kakeibo
+    -> set nyukin = 280000
+    -> where hideuke ='2018-02-11';
+ERROR 1054 (42S22): Unknown column 'hideuke' in 'where clause'
+mysql> update kakeibo
+    -> set nyukin = 280000
+    -> where hiduke = '2018-02-11';
+Query OK, 1 row affected (0.09 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from kakeibo;
++------------+------------+----------------+--------+---------+
+| hiduke     | himoku     | memo           | nyukin | syukkin |
++------------+------------+----------------+--------+---------+
+| 2018-02-03 | 食費       | コーヒーを購入 |      0 |     380 |
+| 2018-02-10 | 給料       | 1月の給料      |      0 |       0 |
+| 2018-02-11 | 教養娯楽費 | 書籍を購入     | 280000 |    2800 |
+| 2018-02-14 | 交際費     | 同期会の会費   |      0 |    5000 |
+| 2018-02-18 | 水道光熱費 | 1月の電気代    |      0 |    7560 |
+| 2018-02-25 | 居住費     | 3月の家賃      |      0 |   85000 |
++------------+------------+----------------+--------+---------+
+6 rows in set (0.04 sec)
+
+mysql> update akeibo
+    -> set nyukin = 280000
+    -> where hideuke ='2018-02-10';
+ERROR 1146 (42S02): Table '12java.akeibo' doesn't exist
+mysql> update kakeibo
+    -> set nyukin = 280000
+    -> where hiduke = '2018-02-11';
+Query OK, 0 rows affected (0.00 sec)
+Rows matched: 1  Changed: 0  Warnings: 0
+
+mysql> select * from kakeibo;
++------------+------------+----------------+--------+---------+
+| hiduke     | himoku     | memo           | nyukin | syukkin |
++------------+------------+----------------+--------+---------+
+| 2018-02-03 | 食費       | コーヒーを購入 |      0 |     380 |
+| 2018-02-10 | 給料       | 1月の給料      |      0 |       0 |
+| 2018-02-11 | 教養娯楽費 | 書籍を購入     | 280000 |    2800 |
+| 2018-02-14 | 交際費     | 同期会の会費   |      0 |    5000 |
+| 2018-02-18 | 水道光熱費 | 1月の電気代    |      0 |    7560 |
+| 2018-02-25 | 居住費     | 3月の家賃      |      0 |   85000 |
++------------+------------+----------------+--------+---------+
+6 rows in set (0.00 sec)
+
+mysql> update kakeibo
+    -> set nyukin = 280000
+    -> where hiduke = '2018-02-10';
+Query OK, 1 row affected (0.09 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update kakeibo
+    -> set nyukin = 99999
+    -> where hiduke = '2018-02-03';
+Query OK, 1 row affected (0.14 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from kakeibo]
+    -> ^C
+mysql> select * from kakeibo;
++------------+------------+----------------+--------+---------+
+| hiduke     | himoku     | memo           | nyukin | syukkin |
++------------+------------+----------------+--------+---------+
+| 2018-02-03 | 食費       | コーヒーを購入 |  99999 |     380 |
+| 2018-02-10 | 給料       | 1月の給料      | 280000 |       0 |
+| 2018-02-11 | 教養娯楽費 | 書籍を購入     | 280000 |    2800 |
+| 2018-02-14 | 交際費     | 同期会の会費   |      0 |    5000 |
+| 2018-02-18 | 水道光熱費 | 1月の電気代    |      0 |    7560 |
+| 2018-02-25 | 居住費     | 3月の家賃      |      0 |   85000 |
++------------+------------+----------------+--------+---------+
+6 rows in set (0.00 sec)
+
+mysql> update kakeibo
+    -> set nyukin = 0
+    -> where hiduke = '2018-02-11';
+Query OK, 1 row affected (0.10 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from kakeibo;
++------------+------------+----------------+--------+---------+
+| hiduke     | himoku     | memo           | nyukin | syukkin |
++------------+------------+----------------+--------+---------+
+| 2018-02-03 | 食費       | コーヒーを購入 |  99999 |     380 |
+| 2018-02-10 | 給料       | 1月の給料      | 280000 |       0 |
+| 2018-02-11 | 教養娯楽費 | 書籍を購入     |      0 |    2800 |
+| 2018-02-14 | 交際費     | 同期会の会費   |      0 |    5000 |
+| 2018-02-18 | 水道光熱費 | 1月の電気代    |      0 |    7560 |
+| 2018-02-25 | 居住費     | 3月の家賃      |      0 |   85000 |
++------------+------------+----------------+--------+---------+
+6 rows in set (0.03 sec)
+
+mysql> delete from kakeibo;
+Query OK, 6 rows affected (0.17 sec)
+
+mysql> show tables;
++------------------+
+| Tables_in_12java |
++------------------+
+| kakeibo          |
++------------------+
+1 row in set (0.07 sec)
+
+mysql> insert into kakeibo values
+    -> ('2018-02-03','食費','コーヒーを購入',0,380),
+    -> ('2018-02-10','給料','1月の給料',280000,0),
+    -> ('2018-02-11','教養娯楽費','書籍を購入',0,2800),
+    -> ('2018-02-14','交際費','同期会の会費',0,5000),
+    -> ('2018-02-18','水道光熱費','1月の電気代',0,7560);
+Query OK, 5 rows affected (0.17 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+mysql>
+mysql> ^C
+mysql> select * from kakeibo;
++------------+------------+----------------+--------+---------+
+| hiduke     | himoku     | memo           | nyukin | syukkin |
++------------+------------+----------------+--------+---------+
+| 2018-02-03 | 食費       | コーヒーを購入 |      0 |     380 |
+| 2018-02-10 | 給料       | 1月の給料      | 280000 |       0 |
+| 2018-02-11 | 教養娯楽費 | 書籍を購入     |      0 |    2800 |
+| 2018-02-14 | 交際費     | 同期会の会費   |      0 |    5000 |
+| 2018-02-18 | 水道光熱費 | 1月の電気代    |      0 |    7560 |
++------------+------------+----------------+--------+---------+
+5 rows in set (0.00 sec)
+
+mysql> insert into kakeibo
+    -> (himoku,hiduke,syukkin)
+    -> values('通信費','2018-02-20',6200)
+    -> ;
+Query OK, 1 row affected (0.09 sec)
+
+mysql> select * from kakeibo;
++------------+------------+----------------+--------+---------+
+| hiduke     | himoku     | memo           | nyukin | syukkin |
++------------+------------+----------------+--------+---------+
+| 2018-02-03 | 食費       | コーヒーを購入 |      0 |     380 |
+| 2018-02-10 | 給料       | 1月の給料      | 280000 |       0 |
+| 2018-02-11 | 教養娯楽費 | 書籍を購入     |      0 |    2800 |
+| 2018-02-14 | 交際費     | 同期会の会費   |      0 |    5000 |
+| 2018-02-18 | 水道光熱費 | 1月の電気代    |      0 |    7560 |
+| 2018-02-20 | 通信費     | NULL           |   NULL |    6200 |
++------------+------------+----------------+--------+---------+
+6 rows in set (0.03 sec)
+
+mysql> insert into kakeibo
+    -> values('2018-02-20','通信費','携帯電話料金',0,6200);
+Query OK, 1 row affected (0.20 sec)
+
+mysql> select * from kakeibo;
++------------+------------+----------------+--------+---------+
+| hiduke     | himoku     | memo           | nyukin | syukkin |
++------------+------------+----------------+--------+---------+
+| 2018-02-03 | 食費       | コーヒーを購入 |      0 |     380 |
+| 2018-02-10 | 給料       | 1月の給料      | 280000 |       0 |
+| 2018-02-11 | 教養娯楽費 | 書籍を購入     |      0 |    2800 |
+| 2018-02-14 | 交際費     | 同期会の会費   |      0 |    5000 |
+| 2018-02-18 | 水道光熱費 | 1月の電気代    |      0 |    7560 |
+| 2018-02-20 | 通信費     | NULL           |   NULL |    6200 |
+| 2018-02-20 | 通信費     | 携帯電話料金   |      0 |    6200 |
++------------+------------+----------------+--------+---------+
+7 rows in set (0.00 sec)
+
+mysql> delete from kakeibo
+    -> where hiduke = '2018-02-20';
+Query OK, 2 rows affected (0.12 sec)
+
+mysql> select * from kakeibo;
++------------+------------+----------------+--------+---------+
+| hiduke     | himoku     | memo           | nyukin | syukkin |
++------------+------------+----------------+--------+---------+
+| 2018-02-03 | 食費       | コーヒーを購入 |      0 |     380 |
+| 2018-02-10 | 給料       | 1月の給料      | 280000 |       0 |
+| 2018-02-11 | 教養娯楽費 | 書籍を購入     |      0 |    2800 |
+| 2018-02-14 | 交際費     | 同期会の会費   |      0 |    5000 |
+| 2018-02-18 | 水道光熱費 | 1月の電気代    |      0 |    7560 |
++------------+------------+----------------+--------+---------+
+5 rows in set (0.00 sec)
+
+mysql> insert into kakeibo
+    -> values('通信費','2018-02-20',6200);
+ERROR 1136 (21S01): Column count doesn't match value count at row 1
+mysql> insert into kakeibo
+    -> (himoku,hiduke,syukkin)
+    -> values('通信費','2018-02-20',6200);
+Query OK, 1 row affected (0.09 sec)
+
+mysql> select * from kakeibo;
++------------+------------+----------------+--------+---------+
+| hiduke     | himoku     | memo           | nyukin | syukkin |
++------------+------------+----------------+--------+---------+
+| 2018-02-03 | 食費       | コーヒーを購入 |      0 |     380 |
+| 2018-02-10 | 給料       | 1月の給料      | 280000 |       0 |
+| 2018-02-11 | 教養娯楽費 | 書籍を購入     |      0 |    2800 |
+| 2018-02-14 | 交際費     | 同期会の会費   |      0 |    5000 |
+| 2018-02-18 | 水道光熱費 | 1月の電気代    |      0 |    7560 |
+| 2018-02-20 | 通信費     | NULL           |   NULL |    6200 |
++------------+------------+----------------+--------+---------+
+6 rows in set (0.03 sec)
+
+mysql> insert kakeibo
+    -> values('2018-02-20','通信費','携帯電話料金',0,6200);
+Query OK, 1 row affected (0.17 sec)
+
+mysql> select * from kakeibo;
++------------+------------+----------------+--------+---------+
+| hiduke     | himoku     | memo           | nyukin | syukkin |
++------------+------------+----------------+--------+---------+
+| 2018-02-03 | 食費       | コーヒーを購入 |      0 |     380 |
+| 2018-02-10 | 給料       | 1月の給料      | 280000 |       0 |
+| 2018-02-11 | 教養娯楽費 | 書籍を購入     |      0 |    2800 |
+| 2018-02-14 | 交際費     | 同期会の会費   |      0 |    5000 |
+| 2018-02-18 | 水道光熱費 | 1月の電気代    |      0 |    7560 |
+| 2018-02-20 | 通信費     | NULL           |   NULL |    6200 |
+| 2018-02-20 | 通信費     | 携帯電話料金   |      0 |    6200 |
++------------+------------+----------------+--------+---------+
+7 rows in set (0.00 sec)
+
+
+課題回答↓　問題2-3
+mysql> select * from todohuken;
++------+--------+--------------+--------+---------+
+| code | tiiki  | todohukenmei | kentyo | menseki |
++------+--------+--------------+--------+---------+
+| 01   | 北海道 | 北海道       | 札幌市 |   83456 |
+| 05   | 東北   | 秋田県       | 秋田市 |   11612 |
+| 13   | 関東   | 東京都       | 新宿区 |    2187 |
+| 16   | 北陸   | 富山県       | 富山市 |    4247 |
+| 20   | 甲信   | 長野県       | 長野市 |   13562 |
+| 21   | 東海   | 岐阜県       | 岐阜市 |   10621 |
+| 34   | 中国   | 広島県       | 広島市 |    8478 |
++------+--------+--------------+--------+---------+
+7 rows in set (0.00 sec)
+
+mysql> select code,todohukenmei,kentyo,menseki
+    -> from todohuken;
++------+--------------+--------+---------+
+| code | todohukenmei | kentyo | menseki |
++------+--------------+--------+---------+
+| 01   | 北海道       | 札幌市 |   83456 |
+| 05   | 秋田県       | 秋田市 |   11612 |
+| 13   | 東京都       | 新宿区 |    2187 |
+| 16   | 富山県       | 富山市 |    4247 |
+| 20   | 長野県       | 長野市 |   13562 |
+| 21   | 岐阜県       | 岐阜市 |   10621 |
+| 34   | 広島県       | 広島市 |    8478 |
++------+--------------+--------+---------+
+7 rows in set (0.00 sec)
+
+mysql> select code,tiiki,todohukenmei,kentyo,menseki
+    -> from todouken;
+ERROR 1146 (42S02): Table '12java.todouken' doesn't exist
+mysql> select code,tiiki,todohukenmei,kentyo,menseki
+    -> from todohuken;
++------+--------+--------------+--------+---------+
+| code | tiiki  | todohukenmei | kentyo | menseki |
++------+--------+--------------+--------+---------+
+| 01   | 北海道 | 北海道       | 札幌市 |   83456 |
+| 05   | 東北   | 秋田県       | 秋田市 |   11612 |
+| 13   | 関東   | 東京都       | 新宿区 |    2187 |
+| 16   | 北陸   | 富山県       | 富山市 |    4247 |
+| 20   | 甲信   | 長野県       | 長野市 |   13562 |
+| 21   | 東海   | 岐阜県       | 岐阜市 |   10621 |
+| 34   | 中国   | 広島県       | 広島市 |    8478 |
++------+--------+--------------+--------+---------+
+7 rows in set (0.00 sec)
+
+mysql> select tiiki AS area,todohukenmei AS pref
+    -> from todouhuken;
+ERROR 1146 (42S02): Table '12java.todouhuken' doesn't exist
+mysql> select tiiki AS area,todohukenmei AS pref
+    -> from todohuken;
++--------+--------+
+| area   | pref   |
++--------+--------+
+| 北海道 | 北海道 |
+| 東北   | 秋田県 |
+| 関東   | 東京都 |
+| 北陸   | 富山県 |
+| 甲信   | 長野県 |
+| 東海   | 岐阜県 |
+| 中国   | 広島県 |
++--------+--------+
+7 rows in set (0.00 sec)
