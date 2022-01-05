@@ -1,0 +1,19 @@
+public class Main {
+
+	public static double clacTriangleArea(double bottom,double heigth) {
+
+		double TriangleArea=  (bottom*heigth)/2;
+
+		return TriangleArea;
+
+	}
+	public static double calcCircleArea(double radius) {
+		double CircleArea = (radius*radius)*3.14;
+		return CircleArea;
+	}
+
+	public static void main(String[] args) {
+		System.out.println("三角形の面積"+clacTriangleArea(10.0,5.0)+"平方cm");
+		System.out.println("円の半径が5.0cmの場合、"+"面積は、"+calcCircleArea(5.0)+"平方cm");
+	}
+}
